@@ -138,7 +138,7 @@ class IDentData(object):
         
     def SetActiveOptimisation(self, optimisation_id=""):
         self.active_optimisation_id = optimisation_id
-        self.number_games = len(self.active_optimisation_id)
+        self.number_games = len(self.optimisation_ids)
 
     def GetOpIds(self):
         file_list = glob.glob(f'{OP_METRICS_OUTPUT_FOLDER}/*.json')

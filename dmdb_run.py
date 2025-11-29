@@ -120,18 +120,16 @@ data_adapter.build_game_data(data_feed, game_args, gene_limits)
 data_adapter.show_game_data()
 
 
-
 # *** Download labels *
 data_adapter.derived_data.build_xr_data(user_uid = game_args['uid'], target=game_args['target'])
 #----------------------------------------------------------------------------
 #                           RUN GAME                                        #
 #----------------------------------------------------------------------------
-# *** Run DMDB game ***
 
-# {self.dump_path}/learn_out/
+# *** Run DMDB game ***
 bot_path = "bots_new"
 dump_path = "/home/vixen/html/dump"
-identGame = mygame.IdentGame(population = population, data_feed = data_feed, derived_data = data_adapter.derived_data, multiple_derived_data = data_adapter.multiple_derived_data, game_id = "rev1", game_parms=game_args, dmdb_flag = True, init_expression_load=True, dump_path=dump_path, bot_path = bot_path)
+identGame = mygame.IdentGame(population = population, data_feed = data_feed, derived_data = data_adapter.derived_data, multiple_derived_data = data_adapter.multiple_derived_data, game_id = "", game_parms=game_args, dmdb_flag = True, init_expression_load=True, dump_path=dump_path, bot_path = bot_path)
 identGame.play()
 
 
